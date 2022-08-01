@@ -1,0 +1,19 @@
+* NGSPICE file created from inv.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_648S5X a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_UGSVTG a_n73_n318# a_n73_118# a_n33_n415# a_15_n318#
++ a_n33_21# a_15_118# w_n211_n537#
+X0 a_15_n318# a_n33_n415# a_n73_n318# w_n211_n537# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+X1 a_15_118# a_n33_21# a_n73_118# w_n211_n537# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt inv A VDD O VSS
+Xsky130_fd_pr__nfet_01v8_648S5X_0 VSS A O VSS sky130_fd_pr__nfet_01v8_648S5X
+Xsky130_fd_pr__pfet_01v8_UGSVTG_0 VDD VDD A O A O VDD sky130_fd_pr__pfet_01v8_UGSVTG
+XXM1 VSS A O VSS sky130_fd_pr__nfet_01v8_648S5X
+Xsky130_fd_pr__pfet_01v8_UGSVTG_1 VDD VDD A O A O VDD sky130_fd_pr__pfet_01v8_UGSVTG
+.ends
+
