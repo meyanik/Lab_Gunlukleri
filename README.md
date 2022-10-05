@@ -1,2 +1,2 @@
 # Lab_Gunlukleri
-GITT ve GATE takımları için lab günlükleri
+SkyWater-130nm teknolojisi için örnek çalışmalar
